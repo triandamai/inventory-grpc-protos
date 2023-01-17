@@ -1,0 +1,6 @@
+[submodule "recipe-grpc-android"]
+	path = recipe-grpc-android
+	url = git@github.com:triandamai/recipe-grpc-android
+[submodule "recipe-grpc-server"]
+	path = recipe-grpc-server
+	url = git@github.com:triandamai/recipe-grpc-server
