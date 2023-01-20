@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "app/trian/proto/inventory/role/types.proto";
+import "app/trian/proto/inventory/role/roletypes.proto";
 
 package app.trian.inventory.stub;
 
