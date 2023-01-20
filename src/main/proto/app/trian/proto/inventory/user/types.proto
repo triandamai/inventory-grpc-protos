@@ -12,11 +12,6 @@ message GetListUserResponse{
   repeated UserResponse data=4;
 }
 
-message CreateUserRequest{
-  string userName=1;
-  string userDescription=2;
-}
-
 message UpdateUserRequest{
   uint64 userId=1;
   string userName=2;
