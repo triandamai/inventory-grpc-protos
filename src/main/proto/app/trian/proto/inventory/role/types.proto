@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+message GetListRoleRequest{
+  int64 pageSize=1;
+  int64 currentPage=2;
+}
+
+message GetListRoleResponse{
+  int64 currentPage=1;
+  int64 totalPage=2;
+  int64 totalItem=3;
+  repeated RoleResponse data=4;
+}
+
+message CreateRoleRequest{
+  string roleName=1;
+  string roleDescription=2;
+}
+
+message UpdateRoleRequest{
+  uint64 roleId=1;
+  string roleName=2;
+  string roleDescription=3;
+}
+
+message RoleResponse{
+  string roleName=1;
+  string roleDescription=2;
+  string createdAt=3;
+  string updatedAt=4;
+}
+
+message DeleteRoleRequest{
+  int64 roleId=1;
+}

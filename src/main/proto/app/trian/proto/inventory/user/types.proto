@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+message GetListUserRequest{
+  int64 pageSize=1;
+  int64 currentPage=2;
+}
+
+message GetListUserResponse{
+  int64 currentPage=1;
+  int64 totalPage=2;
+  int64 totalItem=3;
+  repeated UserResponse data=4;
+}
+
+message CreateUserRequest{
+  string userName=1;
+  string userDescription=2;
+}
+
+message UpdateUserRequest{
+  uint64 userId=1;
+  string userName=2;
+  string userDescription=3;
+}
+
+message UserResponse{
+  string userName=1;
+  string userDescription=2;
+  string createdAt=3;
+  string updatedAt=4;
+}
+
+message DeleteUserRequest{
+  int64 userId=1;
+}

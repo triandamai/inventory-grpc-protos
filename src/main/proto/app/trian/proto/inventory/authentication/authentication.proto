@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "app/trian/proto/inventory/authentication/types.proto";
+
+
+package app.trian.inventory.stub;
+
+option java_multiple_files = true;
+
+service Authentication{
+  rpc signInWithEmailAndPassword(SignInRequest) returns (SignInResponse){}
+  rpc signInWithGoogle(SignInRequest) returns(SignInResponse){}
+
+  rpc signUpWithEmailAndPassword(SignUpRequest) returns(SignUpRequest){}
+  rpc signUpWithGoogle(SignUpRequest) returns(SignUpRequest){}
+}
