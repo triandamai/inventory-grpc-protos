@@ -1,13 +1,14 @@
 syntax = "proto3";
 
 import "app/trian/proto/inventory/role/roletypes.proto";
+import "app/trian/proto/inventory/basetypes.proto"
 
 package app.trian.inventory.stub;
 
 option java_multiple_files = true;
 
 service Role{
-  rpc getListRole(GetListRoleRequest) returns(GetListRoleResponse){}
+  rpc getListRole(GetPagingRequest) returns(GetListRoleResponse){}
   rpc createNewRole(CreateRoleRequest) returns(RoleResponse){}
   rpc updateRole(UpdateRoleRequest) returns(RoleResponse){}
   rpc deleteRole(DeleteRoleRequest) returns(RoleResponse){}

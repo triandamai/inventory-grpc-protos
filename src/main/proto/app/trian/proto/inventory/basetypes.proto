@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package app.trian.inventory.stub;
+
+option java_multiple_files = true;
+
+message GetPagingRequest{
+  int64 page=1;
+}

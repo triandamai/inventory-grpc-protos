@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "app/trian/proto/inventory/basetypes.proto";
+import "app/trian/proto/inventory/customer/customertypes.proto"
+
+package app.trian.inventory.stub;
+
+option java_multiple_files = true;
+
+service Customer{
+  rpc getListCustomer(GetPagingRequest) returns(GetListCustomerResponse){}
+  rpc createNewCustomer(CreateNewCustomerRequest) returns(CustomerResponse){}
+  rpc updateCustomer(UpdateCustomerRequest) returns(CustomerResponse){}
+  rpc deleteCustomer(DeleteCustomerRequest) returns(DeleteCustomerRequest){}
+
+}
