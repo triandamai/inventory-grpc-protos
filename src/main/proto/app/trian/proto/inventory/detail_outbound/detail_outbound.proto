@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "app/trian/proto/inventory/basetypes.proto";
+import "app/trian/proto/inventory/detail_outbound/detail_outboundtypes.proto";
+
+package app.trian.inventory.stub;
+
+option java_multiple_files = true;
+
+service DetailOutbound{
+  rpc getListOutbound(GetPagingRequest) returns(GetListDetailOutboundResponse){}
+  rpc createNewOutbound(CreateNewDetailOutboundRequest) returns(DetailOutboundResponse){}
+  rpc updateOutbound(UpdateDetailOutboundRequest) returns(DetailOutboundResponse){}
+  rpc deleteOutbound(DeleteDetailOutboundRequest) returns(DetailOutboundResponse){}
+
+}

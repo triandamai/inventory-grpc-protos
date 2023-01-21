@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "app/trian/proto/inventory/basetypes.proto";
+import "app/trian/proto/inventory/supplier/suppliertypes.proto";
+
+package app.trian.inventory.stub;
+
+option java_multiple_files = true;
+
+service Supplier{
+  rpc getListSupplier(GetPagingRequest) returns(GetListSupplierResponse){}
+  rpc createNewSupplier(CreateNewSupplierRequest) returns(SupplierResponse){}
+  rpc updateSupplier(UpdateSupplierRequest) returns(SupplierResponse){}
+  rpc deleteSupplier(DeleteSupplierRequest) returns(SupplierResponse){}
+
+}

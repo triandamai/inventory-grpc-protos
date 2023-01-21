@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package app.trian.inventory.stub;
+
+option java_multiple_files = true;
+
+message GetListProductRequest{
+  int64 pageSize=1;
+  int64 currentPage=2;
+}
+
+message GetListProductResponse{
+  int64 currentPage=1;
+  int64 totalPage=2;
+  int64 totalItem=3;
+  repeated ProductResponse data=4;
+}
+
+message CreateProductRequest{
+  string roleName=1;
+  string roleDescription=2;
+}
+
+message UpdateProductRequest{
+  uint64 roleId=1;
+  string roleName=2;
+  string roleDescription=3;
+}
+
+message ProductResponse{
+  string roleName=1;
+  string roleDescription=2;
+  string createdAt=3;
+  string updatedAt=4;
+}
+
+message DeleteProductRequest{
+  int64 roleId=1;
+}

@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package app.trian.inventory.stub;
+
+option java_multiple_files = true;
+
+message GetListCategoryRequest{
+  int64 pageSize=1;
+  int64 currentPage=2;
+}
+
+message GetListCategoryResponse{
+  int64 currentPage=1;
+  int64 totalPage=2;
+  int64 totalItem=3;
+  repeated CategoryResponse data=4;
+}
+
+message CreateCategoryRequest{
+  string roleName=1;
+  string roleDescription=2;
+}
+
+message UpdateCategoryRequest{
+  uint64 roleId=1;
+  string roleName=2;
+  string roleDescription=3;
+}
+
+message CategoryResponse{
+  string roleName=1;
+  string roleDescription=2;
+  string createdAt=3;
+  string updatedAt=4;
+}
+
+message DeleteCategoryRequest{
+  int64 roleId=1;
+}
