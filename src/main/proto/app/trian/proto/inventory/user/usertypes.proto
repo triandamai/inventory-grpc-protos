@@ -17,16 +17,20 @@ message GetListUserResponse{
 }
 
 message UpdateUserRequest{
-  uint64 userId=1;
-  string userName=2;
-  string userDescription=3;
+  int64 userId=1;
+  optional string userFullName=2;
+  optional string userEmail=3;
+  optional string authProvider=5;
 }
 
 message UserResponse{
-  string userName=1;
-  string userDescription=2;
-  string createdAt=3;
-  string updatedAt=4;
+  int64 userId=1;
+  string userFullName=2;
+  string userEmail=3;
+  //string password=4;
+  string authProvider=5;
+  string createdAt=6;
+  string updatedAt=7;
 }
 
 message DeleteUserRequest{

@@ -17,21 +17,22 @@ message GetListCategoryResponse{
 }
 
 message CreateCategoryRequest{
-  string roleName=1;
-  string roleDescription=2;
+  string categoryName=1;
+  string categoryDescription=2;
 }
 
 message UpdateCategoryRequest{
-  uint64 roleId=1;
-  string roleName=2;
-  string roleDescription=3;
+  uint64 categoryId=1;
+  optional string  categoryName=2;
+  optional string categoryDescription=3;
 }
 
 message CategoryResponse{
-  string roleName=1;
-  string roleDescription=2;
-  string createdAt=3;
-  string updatedAt=4;
+  int64 categoryId=1;
+  string categoryName=2;
+  string categoryDescription=3;
+  string createdAt=4;
+  string updatedAt=5;
 }
 
 message DeleteCategoryRequest{

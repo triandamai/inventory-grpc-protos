@@ -13,16 +13,30 @@ message GetListSupplierResponse{
 }
 
 message CreateNewSupplierRequest{
-
+  string supplierFullName=2;
+  string supplierOrgName=3;
+  string supplierPhoneNumber=4;
+  string supplierAddress=5;
 }
 
 message UpdateSupplierRequest{
-
+  int64 supplierId=1;
+  optional string supplierFullName=2;
+  optional string supplierOrgName=3;
+  optional string supplierPhoneNumber=4;
+  optional string supplierAddress=5;
 }
 
 message  DeleteSupplierRequest{
   int64 customerId = 1;
 }
-message SupplierResponse{
 
+message SupplierResponse{
+  int64 supplierId=1;
+  string supplierFullName=2;
+  string supplierOrgName=3;
+  string supplierPhoneNumber=4;
+  string supplierAddress=5;
+  string createdAt=6;
+  string updatedAt=7;
 }

@@ -1,5 +1,8 @@
 syntax = "proto3";
 
+import "app/trian/proto/inventory/product/producttypes.proto";
+import "app/trian/proto/inventory/outbound/outboundtypes.proto";
+
 package app.trian.inventory.stub;
 
 option java_multiple_files = true;
@@ -24,5 +27,10 @@ message  DeleteDetailOutboundRequest{
   int64 customerId = 1;
 }
 message DetailOutboundResponse{
-
+  int64 detailOutboundId=1;
+  optional ProductResponse product=2;
+  optional OutboundResponse outbound=3;
+  int64 quantity=4;
+  int64 price=5;
+  int64 totalPrice=6;
 }
