@@ -27,14 +27,18 @@ message UpdateCategoryRequest{
   optional string categoryDescription=3;
 }
 
+message DeleteCategoryRequest{
+  int64 categoryId=1;
+}
+
+message GetCategoryByIdRequest{
+  int64 categoryId=1;
+}
+
 message CategoryResponse{
   int64 categoryId=1;
   string categoryName=2;
   string categoryDescription=3;
   string createdAt=4;
   string updatedAt=5;
-}
-
-message DeleteCategoryRequest{
-  int64 roleId=1;
 }
