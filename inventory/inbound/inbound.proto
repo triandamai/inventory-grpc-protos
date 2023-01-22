@@ -10,6 +10,7 @@ service Inbound{
   rpc getListInbound(GetPagingRequest) returns(GetListInboundResponse){}
   rpc createNewInbound(CreateNewInboundRequest) returns(InboundResponse){}
   rpc updateInbound(UpdateInboundRequest) returns(InboundResponse){}
+  rpc updateStatusInbound(UpdateStatusRequest) returns (InboundResponse){}
   rpc deleteInbound(DeleteInboundRequest) returns(InboundResponse){}
 
 }

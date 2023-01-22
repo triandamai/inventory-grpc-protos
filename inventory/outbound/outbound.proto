@@ -10,6 +10,7 @@ service Outbound{
   rpc getListOutbound(GetPagingRequest) returns(GetListOutboundResponse){}
   rpc createNewOutbound(CreateNewOutboundRequest) returns(OutboundResponse){}
   rpc updateOutbound(UpdateOutboundRequest) returns(OutboundResponse){}
+  rpc updateStatusOutbound(UpdateStatusRequest) returns (OutboundResponse){}
   rpc deleteOutbound(DeleteOutboundRequest) returns(OutboundResponse){}
 
 }

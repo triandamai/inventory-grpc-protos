@@ -7,9 +7,8 @@ import "basetypes.proto";
 import "detail_outbound/detail_outboundtypes.proto";
 
 service DetailOutbound{
-  rpc getListOutbound(GetPagingRequest) returns(GetListDetailOutboundResponse){}
-  rpc createNewOutbound(CreateNewDetailOutboundRequest) returns(DetailOutboundResponse){}
-  rpc updateOutbound(UpdateDetailOutboundRequest) returns(DetailOutboundResponse){}
-  rpc deleteOutbound(DeleteDetailOutboundRequest) returns(DetailOutboundResponse){}
-
+  rpc getListDetailOutbound(GetPagingRequestWithId) returns(GetListDetailOutboundResponse){}
+  rpc addNewDetailOutbound(CreateNewDetailOutboundRequest) returns(DetailOutboundResponse){}
+  rpc updateDetailOutbound(UpdateDetailOutboundRequest) returns(DetailOutboundResponse){}
+  rpc deleteDetailOutbound(DeleteDetailOutboundRequest) returns(DetailOutboundResponse){}
 }
