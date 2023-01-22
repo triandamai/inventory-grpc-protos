@@ -4,5 +4,5 @@ plugins {
 
 java {
     sourceSets.getByName("main")
-        .resources.srcDir("src/main/proto")
+        .resources.srcDir("inventory")
 }

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package app.trian.inventory.v1.outbound;
+option java_multiple_files = true;
+
+import "basetypes.proto";
+import "outbound/outboundtypes.proto";
+
+service Outbound{
+  rpc getListOutbound(GetPagingRequest) returns(GetListOutboundResponse){}
+  rpc createNewOutbound(CreateNewOutboundRequest) returns(OutboundResponse){}
+  rpc updateOutbound(UpdateOutboundRequest) returns(OutboundResponse){}
+  rpc deleteOutbound(DeleteOutboundRequest) returns(OutboundResponse){}
+
+}

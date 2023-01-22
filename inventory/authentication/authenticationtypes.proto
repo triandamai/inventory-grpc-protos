@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package app.trian.inventory.v1.authentication;
+option java_multiple_files = true;
+
+import "role/roletypes.proto";
+import "user/usertypes.proto";
+
+
+message SignInRequest{
+  string email=1;
+  string password=2;
+}
+
+message SignUpRequest{
+  string email=1;
+  string fullName=2;
+  string password=3;
+}
+
+message SignInResponse{
+  bool success=1;
+  string message=2;
+  optional user.UserResponse user=3;
+  repeated role.RoleResponse roles=4;
+
+}

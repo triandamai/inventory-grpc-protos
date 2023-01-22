@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package app.trian.inventory.v1.detail_inbound;
+option java_multiple_files = true;
+
+import "basetypes.proto";
+import "detail_inbound/detail_inboundtypes.proto";
+
+service DetailInbound{
+  rpc getListInbound(GetPagingRequest) returns(GetListDetailInboundResponse){}
+  rpc createNewInbound(CreateNewDetailInboundRequest) returns(DetailInboundResponse){}
+  rpc updateInbound(UpdateDetailInboundRequest) returns(DetailInboundResponse){}
+  rpc deleteInbound(DeleteDetailInboundRequest) returns(DetailInboundResponse){}
+
+}

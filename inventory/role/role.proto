@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package app.trian.inventory.v1.role;
+
+import "basetypes.proto";
+import "role/roletypes.proto";
+
+service Role{
+  rpc getListRole(GetPagingRequest) returns(GetListRoleResponse){}
+  rpc createNewRole(CreateRoleRequest) returns(RoleResponse){}
+  rpc updateRole(UpdateRoleRequest) returns(RoleResponse){}
+  rpc deleteRole(DeleteRoleRequest) returns(RoleResponse){}
+}

@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package app.trian.inventory.v1.outbound;
+option java_multiple_files = true;
+
+import "customer/customertypes.proto";
+import "user/usertypes.proto";
+
+message GetListOutboundResponse{
+  int64 currentPage = 1;
+  int64 totalPage = 2;
+  int64 totalItem = 3;
+  repeated OutboundResponse data = 4;
+}
+
+message CreateNewOutboundRequest{
+
+}
+
+message UpdateOutboundRequest{
+
+}
+
+message  DeleteOutboundRequest{
+  int64 customerId = 1;
+}
+message OutboundResponse{
+  int64 outboundId=1;
+  optional customer.CustomerResponse customer=2;
+  optional user.UserResponse cashier=3;
+  int64 totalAmount=4;
+  int64 statues=5;
+  string createdAt=6;
+  string updatedAt=7;
+}

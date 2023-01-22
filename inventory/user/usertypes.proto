@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package app.trian.inventory.v1.user;
+
+option java_multiple_files = true;
+
+import "role/roletypes.proto";
+
+message GetListUserRequest{
+  int64 size=1;
+  int64 page=2;
+}
+
+message GetListUserResponse{
+  int64 currentPage=1;
+  int64 totalPage=2;
+  int64 totalItem=3;
+  repeated UserResponse data=4;
+}
+message CreateUserRequest{
+  string email=1;
+  string fullName=2;
+  string password=3;
+}
+message UpdateUserRequest{
+  int64 userId=1;
+  optional string userFullName=2;
+  optional string userEmail=3;
+  optional string authProvider=5;
+}
+
+message UserResponse{
+  int64 userId=1;
+  string userFullName=2;
+  string userEmail=3;
+  //string password=4;
+  string authProvider=5;
+  string createdAt=6;
+  string updatedAt=7;
+  repeated role.RoleResponse roles=8;
+}
+
+
+
+message DeleteUserRequest{
+  int64 userId=1;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package app.trian.inventory.v1.category;
+option java_multiple_files = true;
+
+import "category/categorytypes.proto";
+import "basetypes.proto";
+import "google/protobuf/type.proto";
+
+service Category{
+  rpc getListCategory(GetPagingRequest) returns(GetListCategoryResponse){}
+  rpc getCategoryById(google.protobuf.Field) returns(CategoryResponse){}
+  rpc createNewCategory(CreateCategoryRequest) returns(CategoryResponse){}
+  rpc updateCategory(UpdateCategoryRequest) returns(CategoryResponse){}
+  rpc deleteCategory(DeleteCategoryRequest) returns(CategoryResponse){}
+}
+

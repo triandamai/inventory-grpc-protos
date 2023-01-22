@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package app.trian.inventory.v1.product;
+option java_multiple_files = true;
+
+import "basetypes.proto";
+import "product/producttypes.proto";
+
+service Product{
+  rpc getListProduct(GetPagingRequest) returns(GetListProductResponse){}
+  rpc createNewProduct(CreateProductRequest) returns(ProductResponse){}
+  rpc updateProduct(UpdateProductRequest) returns(ProductResponse){}
+  rpc deleteProduct(DeleteProductRequest) returns(ProductResponse){}
+}
+
