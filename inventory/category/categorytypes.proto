@@ -32,7 +32,7 @@ message DeleteCategoryRequest{
 }
 
 message GetCategoryByIdRequest{
-  int64 categoryId=1;
+  string categoryId=1;
 }
 
 message CategoryResponse{

@@ -62,5 +62,5 @@ message UserResponse{
 
 
 message DeleteUserRequest{
-  int64 userId=1;
+  string userId=1;
 }

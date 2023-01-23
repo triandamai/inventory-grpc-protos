@@ -25,7 +25,7 @@ message UpdateCustomerRequest{
 }
 
 message  DeleteCustomerRequest{
-  int64 customerId = 1;
+  string customerId = 1;
 }
 message CustomerResponse{
   string customerId=1;

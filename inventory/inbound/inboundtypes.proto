@@ -22,7 +22,7 @@ message UpdateInboundRequest{
 }
 
 message  DeleteInboundRequest{
-  int64 customerId = 1;
+  string customerId = 1;
 }
 message InboundResponse{
   string inboundId=1;

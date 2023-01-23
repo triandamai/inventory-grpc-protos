@@ -30,5 +30,5 @@ message RoleResponse{
 }
 
 message DeleteRoleRequest{
-  int64 roleId=1;
+  string roleId=1;
 }
