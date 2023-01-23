@@ -18,7 +18,7 @@ message CreateNewCustomerRequest{
 }
 
 message UpdateCustomerRequest{
-  int64 customerId=1;
+  string customerId=1;
   optional string customerFullName=2;
   optional string customerEmail=3;
   optional string customerPhoneNumber=4;
