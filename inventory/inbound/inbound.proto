@@ -12,5 +12,4 @@ service Inbound{
   rpc updateInbound(UpdateInboundRequest) returns(InboundResponse){}
   rpc updateStatusInbound(UpdateStatusRequest) returns (InboundResponse){}
   rpc deleteInbound(DeleteInboundRequest) returns(InboundResponse){}
-
 }
