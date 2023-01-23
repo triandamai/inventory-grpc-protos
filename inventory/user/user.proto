@@ -6,9 +6,10 @@ option java_multiple_files = true;
 import "user/usertypes.proto";
 
 service User{
-  rpc getListUser(GetListUserRequest) returns(GetListUserResponse){}
-  rpc addUserByAdmin(CreateUserRequest)returns (UserResponse){}
-  rpc updateUser(UpdateUserRequest) returns(UserResponse){}
-  rpc assignRoleUser(AssignRoleRequest) returns (UserResponse){}
-  rpc deleteUser(DeleteUserRequest) returns(UserResponse){}
+  rpc getListUser(GetListUserRequest) returns(GetListUserResponse);
+  rpc addUserByAdmin(CreateUserRequest)returns (UserResponse);
+  rpc updateUser(UpdateUserRequest) returns(UserResponse);
+  rpc assignRoleUser(AssignRoleRequest) returns (UserResponse);
+  rpc uploadImageUser(stream UserImageUploadRequest)returns (UserImageUploadResponse);
+  rpc deleteUser(DeleteUserRequest) returns(UserResponse);
 }

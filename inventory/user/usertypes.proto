@@ -4,6 +4,7 @@ package app.trian.inventory.v1.user;
 
 option java_multiple_files = true;
 
+import "basetypes.proto";
 import "role/roletypes.proto";
 
 message GetListUserRequest{
@@ -34,6 +35,19 @@ message AssignRoleRequest{
   repeated string roles=2;
 }
 
+message UserImageUploadRequest{
+  string userId=1;
+  oneof request{
+    MetaData metadata=2;
+    File file =3;
+  }
+}
+
+message UserImageUploadResponse{
+  string name=1;
+  string userId=2;
+  UploadStatus status = 3;
+}
 message UserResponse{
   string userId=1;
   string userFullName=2;

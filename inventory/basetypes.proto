@@ -16,3 +16,19 @@ message GetPagingRequestWithId{
 message UpdateStatusRequest{
   int64 transactionId=1;
 }
+
+message MetaData{
+  string name=1;
+  string type=2;
+}
+
+message File{
+  bytes content=1;
+}
+
+enum UploadStatus{
+  PENDING = 0;
+  IN_PROGRESS = 1;
+  SUCCESS = 2;
+  FAILED = 3;
+}
