@@ -9,5 +9,6 @@ service User{
   rpc getListUser(GetListUserRequest) returns(GetListUserResponse){}
   rpc addUserByAdmin(CreateUserRequest)returns (UserResponse){}
   rpc updateUser(UpdateUserRequest) returns(UserResponse){}
+  rpc assignRoleUser(AssignRoleRequest) returns (UserResponse){}
   rpc deleteUser(DeleteUserRequest) returns(UserResponse){}
 }

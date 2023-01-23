@@ -23,14 +23,19 @@ message CreateUserRequest{
   string password=3;
 }
 message UpdateUserRequest{
-  int64 userId=1;
+  string userId=1;
   optional string userFullName=2;
   optional string userEmail=3;
   optional string authProvider=5;
 }
 
+message AssignRoleRequest{
+  string userId=1;
+  repeated string roles=2;
+}
+
 message UserResponse{
-  int64 userId=1;
+  string userId=1;
   string userFullName=2;
   string userEmail=3;
   //string password=4;
