@@ -16,16 +16,17 @@ message CreateRoleRequest{
 }
 
 message UpdateRoleRequest{
-  uint64 roleId=1;
-  string roleName=2;
-  string roleDescription=3;
+  string roleId=1;
+  optional string roleName=2;
+  optional string roleDescription=3;
 }
 
 message RoleResponse{
-  string roleName=1;
-  string roleDescription=2;
-  string createdAt=3;
-  string updatedAt=4;
+  string roleId=1;
+  string roleName=2;
+  string roleDescription=3;
+  string createdAt=4;
+  string updatedAt=5;
 }
 
 message DeleteRoleRequest{

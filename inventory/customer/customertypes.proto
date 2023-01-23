@@ -28,7 +28,7 @@ message  DeleteCustomerRequest{
   int64 customerId = 1;
 }
 message CustomerResponse{
-  int64 customerId=1;
+  string customerId=1;
   string customerFullName=2;
   string customerEmail=3;
   string customerPhoneNumber=4;

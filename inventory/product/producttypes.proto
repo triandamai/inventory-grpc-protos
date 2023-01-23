@@ -28,7 +28,7 @@ message UpdateProductRequest{
 }
 
 message ProductResponse{
-  int64 productId=1;
+  string productId=1;
   string productName=2;
   string productDescription=3;
   string productImage=4;

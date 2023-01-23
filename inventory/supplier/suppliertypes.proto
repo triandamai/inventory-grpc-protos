@@ -32,7 +32,7 @@ message  DeleteSupplierRequest{
 }
 
 message SupplierResponse{
-  int64 supplierId=1;
+  string supplierId=1;
   string supplierFullName=2;
   string supplierOrgName=3;
   string supplierPhoneNumber=4;

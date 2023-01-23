@@ -25,7 +25,7 @@ message  DeleteOutboundRequest{
   int64 customerId = 1;
 }
 message OutboundResponse{
-  int64 outboundId=1;
+  string outboundId=1;
   optional customer.CustomerResponse customer=2;
   optional user.UserResponse cashier=3;
   int64 totalAmount=4;

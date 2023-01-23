@@ -25,7 +25,7 @@ message  DeleteInboundRequest{
   int64 customerId = 1;
 }
 message InboundResponse{
-  int64 inboundId=1;
+  string inboundId=1;
   optional user.UserResponse cashier=2;
   optional supplier.SupplierResponse supplier=3;
   int64 totalAmount=4;
