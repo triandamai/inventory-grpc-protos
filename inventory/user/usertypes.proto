@@ -27,7 +27,6 @@ message UpdateUserRequest{
   string userId=1;
   optional string userFullName=2;
   optional string userEmail=3;
-  optional string authProvider=5;
 }
 
 message AssignRoleRequest{
@@ -54,9 +53,10 @@ message UserResponse{
   string userEmail=3;
   //string password=4;
   string authProvider=5;
-  string createdAt=6;
-  string updatedAt=7;
-  repeated role.RoleResponse roles=8;
+  string image=6;
+  string createdAt=7;
+  string updatedAt=8;
+  repeated role.RoleResponse roles=9;
 }
 
 
