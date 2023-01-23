@@ -24,7 +24,7 @@ message  DeleteDetailOutboundRequest{
   int64 customerId = 1;
 }
 message DetailOutboundResponse{
-  int64 detailOutboundId=1;
+  string detailOutboundId=1;
   optional product.ProductResponse product=2;
   optional outbound.OutboundResponse outbound=3;
   int64 quantity=4;
