@@ -22,6 +22,4 @@ message SignInResponse{
   bool success=1;
   string message=2;
   optional user.UserResponse user=3;
-  repeated role.RoleResponse roles=4;
-
 }
