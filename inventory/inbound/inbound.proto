@@ -7,9 +7,14 @@ import "basetypes.proto";
 import "inbound/inboundtypes.proto";
 
 service Inbound{
-  rpc getListInbound(GetPagingRequest) returns(GetListInboundResponse){}
-  rpc createNewInbound(CreateNewInboundRequest) returns(InboundResponse){}
-  rpc updateInbound(UpdateInboundRequest) returns(InboundResponse){}
-  rpc updateStatusInbound(UpdateStatusRequest) returns (InboundResponse){}
-  rpc deleteInbound(DeleteInboundRequest) returns(InboundResponse){}
+  rpc getListInbound(GetPagingRequest) returns(GetListInboundResponse);
+  rpc getListInboundByCashier(GetPagingRequestWithId) returns (GetListInboundResponse);
+  rpc getListInboundBySupplier(GetPagingRequestWithId) returns (GetListInboundResponse);
+  rpc getListDetailInbound(GetPagingRequestWithId) returns(GetListDetailInboundResponse);
+  rpc getDetailInbound(GetById) returns (InboundResponse);
+  rpc createNewInbound(CreateNewInboundRequest) returns(InboundResponse);
+  rpc updateInbound(UpdateInboundRequest) returns(InboundResponse);
+  rpc updateStatusInbound(UpdateStatusRequest) returns (InboundResponse);
+  rpc deleteInbound(DeleteInboundRequest) returns(InboundResponse);
+  rpc deleteDetailInbound(DeleteDetailInboundRequest) returns (DetailInboundResponse);
 }

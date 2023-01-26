@@ -19,6 +19,7 @@ message GetPagingRequestWithId{
 
 message UpdateStatusRequest{
   string transactionId=1;
+  string status=2;
 }
 
 message MetaData{

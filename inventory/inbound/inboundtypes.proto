@@ -3,6 +3,7 @@ syntax = "proto3";
 package app.trian.inventory.v1.inbound;
 option java_multiple_files = true;
 
+import "product/producttypes.proto";
 import "user/usertypes.proto";
 import "supplier/suppliertypes.proto";
 
@@ -14,11 +15,18 @@ message GetListInboundResponse{
 }
 
 message CreateNewInboundRequest{
-
+  string cashierId=1;
+  string supplierId=2;
+  int64 totalAmount=3;
+  string status=4;
+  repeated DetailInboundResponse detail=5;
 }
 
 message UpdateInboundRequest{
-
+  string supplierId=2;
+  int64 totalAmount=3;
+  string status=4;
+  repeated DetailInboundResponse detail=5;
 }
 
 message  DeleteInboundRequest{
@@ -32,4 +40,38 @@ message InboundResponse{
   int64 statue=5;
   string createdAt=6;
   string updatedAt=7;
+}
+
+message GetListDetailInboundResponse{
+  int64 currentPage = 1;
+  int64 totalPage = 2;
+  int64 totalItem = 3;
+  repeated DetailInboundResponse data = 4;
+}
+
+message CreateNewDetailInboundRequest{
+  string productId=1;
+  int64 quantity=3;
+  int64 price=4;
+  int64 totalPrice=5;
+}
+
+message UpdateDetailInboundRequest{
+  string detailInboundId=1;
+  int64 quantity=2;
+  int64 price=3;
+}
+
+message  DeleteDetailInboundRequest{
+  repeated string detailInboundId = 1;
+}
+message DetailInboundResponse{
+  string detailInboundId=1;
+  optional product.ProductResponse product=2;
+  optional inbound.InboundResponse inbound=3;
+  int64 quantity=4;
+  int64 price=5;
+  int64 totalPrice=6;
+  string createdAt=7;
+  string updatedAt=8;
 }
