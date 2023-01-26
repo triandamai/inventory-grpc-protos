@@ -41,5 +41,5 @@ message ProductResponse{
 }
 
 message DeleteProductRequest{
-  string roleId=1;
+  string productId=1;
 }
