@@ -6,8 +6,9 @@ import "basetypes.proto";
 import "role/roletypes.proto";
 
 service Role{
-  rpc getListRole(GetPagingRequest) returns(GetListRoleResponse){}
-  rpc createNewRole(CreateRoleRequest) returns(RoleResponse){}
-  rpc updateRole(UpdateRoleRequest) returns(RoleResponse){}
-  rpc deleteRole(DeleteRoleRequest) returns(RoleResponse){}
+  rpc getListRole(GetPagingRequest) returns(GetListRoleResponse);
+  rpc getDetailRoleById(GetById) returns (RoleResponse);
+  rpc createNewRole(CreateRoleRequest) returns(RoleResponse);
+  rpc updateRole(UpdateRoleRequest) returns(RoleResponse);
+  rpc deleteRole(DeleteRoleRequest) returns(RoleResponse);
 }

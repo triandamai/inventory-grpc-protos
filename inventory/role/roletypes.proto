@@ -1,6 +1,9 @@
 syntax = "proto3";
 
 package app.trian.inventory.v1.role;
+
+import "permission/permissiontypes.proto";
+
 option java_multiple_files = true;
 
 message GetListRoleResponse{
@@ -13,20 +16,23 @@ message GetListRoleResponse{
 message CreateRoleRequest{
   string roleName=1;
   string roleDescription=2;
+  repeated string permission=3;
 }
 
 message UpdateRoleRequest{
   string roleId=1;
   optional string roleName=2;
   optional string roleDescription=3;
+  repeated string permission=4;
 }
 
 message RoleResponse{
   string roleId=1;
   string roleName=2;
   string roleDescription=3;
-  string createdAt=4;
-  string updatedAt=5;
+  repeated permission.PermissionResponse permission=4;
+  string createdAt=5;
+  string updatedAt=6;
 }
 
 message DeleteRoleRequest{

@@ -8,13 +8,17 @@ message GetPagingRequest{
   int64 page=1;
 }
 
+message GetById{
+  string resourceId=1;
+}
+
 message GetPagingRequestWithId{
   int64 page=1;
-  int64 resourceId=2;
+  string resourceId=2;
 }
 
 message UpdateStatusRequest{
-  int64 transactionId=1;
+  string transactionId=1;
 }
 
 message MetaData{

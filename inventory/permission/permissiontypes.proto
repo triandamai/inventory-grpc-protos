@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package app.trian.inventory.v1.permission;
+option java_multiple_files = true;
+
+message GetListPermissionResponse{
+  int64 currentPage=1;
+  int64 totalPage=2;
+  int64 totalItem=3;
+  repeated PermissionResponse data=4;
+}
+message PermissionResponse{
+  string permissionId=1;
+  string permissionName=2;
+  string permissionType=3;
+  string permissionGroup=4;
+  string createdAt=5;
+  string updatedAt=6;
+}

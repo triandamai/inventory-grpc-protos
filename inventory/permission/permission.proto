@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package app.trian.inventory.v1.permission;
+
+import "basetypes.proto";
+import "permission/permissiontypes.proto";
+
+
+service Permission{
+  rpc getListPermission(GetPagingRequest) returns(GetListPermissionResponse);
+}
