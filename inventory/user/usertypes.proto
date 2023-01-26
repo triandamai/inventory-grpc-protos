@@ -18,6 +18,12 @@ message CreateUserRequest{
   string fullName=2;
   string password=3;
 }
+message CreateUserByAdminRequest{
+  string email=1;
+  string fullName=2;
+  string password=3;
+  string roleId=4;
+}
 message UpdateUserRequest{
   string userId=1;
   optional string userFullName=2;
