@@ -22,12 +22,13 @@ message CreateUserByAdminRequest{
   string email=1;
   string fullName=2;
   string password=3;
-  string roleId=4;
+  repeated string roles=4;
 }
 message UpdateUserRequest{
   string userId=1;
   optional string userFullName=2;
   optional string userEmail=3;
+  optional string roles=4;
 }
 
 message AssignRoleRequest{

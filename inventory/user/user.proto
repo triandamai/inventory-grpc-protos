@@ -8,6 +8,7 @@ import "user/usertypes.proto";
 
 service User{
   rpc getListUser(GetPagingRequest) returns(GetListUserResponse);
+  rpc getUserBydId(GetById) returns (UserResponse);
   rpc addUserByAdmin(CreateUserByAdminRequest)returns (UserResponse);
   rpc updateUser(UpdateUserRequest) returns(UserResponse);
   rpc assignRoleUser(AssignRoleRequest) returns (UserResponse);
