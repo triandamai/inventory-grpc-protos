@@ -8,6 +8,7 @@ import "customer/customertypes.proto";
 
 service Customer{
   rpc getListCustomer(GetPagingRequest) returns(GetListCustomerResponse){}
+  rpc getCustomerById(GetById) returns (CustomerResponse);
   rpc createNewCustomer(CreateNewCustomerRequest) returns(CustomerResponse){}
   rpc updateCustomer(UpdateCustomerRequest) returns(CustomerResponse){}
   rpc deleteCustomer(DeleteCustomerRequest) returns(CustomerResponse){}

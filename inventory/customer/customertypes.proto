@@ -12,6 +12,7 @@ message GetListCustomerResponse{
 }
 
 message CreateNewCustomerRequest{
+  string customerAddress=1;
   string customerFullName=2;
   string customerEmail=3;
   string customerPhoneNumber=4;
@@ -19,9 +20,10 @@ message CreateNewCustomerRequest{
 
 message UpdateCustomerRequest{
   string customerId=1;
-  optional string customerFullName=2;
-  optional string customerEmail=3;
-  optional string customerPhoneNumber=4;
+  optional string customerAddress=2;
+  optional string customerFullName=3;
+  optional string customerEmail=4;
+  optional string customerPhoneNumber=5;
 }
 
 message  DeleteCustomerRequest{
@@ -29,9 +31,10 @@ message  DeleteCustomerRequest{
 }
 message CustomerResponse{
   string customerId=1;
-  string customerFullName=2;
-  string customerEmail=3;
-  string customerPhoneNumber=4;
-  string createdAt=5;
-  string updatedAt=6;
+  string customerAddress=2;
+  string customerFullName=3;
+  string customerEmail=4;
+  string customerPhoneNumber=5;
+  string createdAt=6;
+  string updatedAt=7;
 }
