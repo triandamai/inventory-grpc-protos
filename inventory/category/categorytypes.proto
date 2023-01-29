@@ -22,13 +22,13 @@ message CreateCategoryRequest{
 }
 
 message UpdateCategoryRequest{
-  uint64 categoryId=1;
+  string categoryId=1;
   optional string  categoryName=2;
   optional string categoryDescription=3;
 }
 
 message DeleteCategoryRequest{
-  int64 categoryId=1;
+  string categoryId=1;
 }
 
 message GetCategoryByIdRequest{
