@@ -19,12 +19,22 @@ message GetListProductResponse{
 message CreateProductRequest{
   string productName=1;
   string productDescription=2;
+  string productUnit=3;
+  int64 productStock=4;
+  int64 productOutboundPrice=5;
+  int64 productInboundPrice=6;
+  repeated string  category=7;
 }
 
 message UpdateProductRequest{
-  uint64 productId=1;
+  string productId=1;
   string productName=2;
   string productDescription=3;
+  string productUnit=4;
+  int64 productStock=5;
+  int64 productOutboundPrice=6;
+  int64 productInboundPrice=7;
+  repeated string  category=8;
 }
 
 message ProductResponse{
@@ -34,10 +44,11 @@ message ProductResponse{
   string productImage=4;
   string productUnit=5;
   int64 productOutboundPrice=6;
-  optional category.CategoryResponse category=7;
-  int64 productStock=8;
-  string createdAt=9;
-  string updatedAt=10;
+  int64 productInboundPrice=7;
+  optional category.CategoryResponse category=8;
+  int64 productStock=9;
+  string createdAt=10;
+  string updatedAt=11;
 }
 
 message DeleteProductRequest{
