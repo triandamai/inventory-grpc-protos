@@ -16,5 +16,5 @@ service Outbound{
   rpc updateOutbound(UpdateOutboundRequest) returns(OutboundResponse);
   rpc updateStatusOutbound(UpdateStatusRequest) returns (OutboundResponse);
   rpc deleteOutbound(DeleteOutboundRequest) returns(OutboundResponse);
-  rpc deleteDetailOutbound(DeleteDetailOutboundRequest) returns (DetailOutboundResponse);
+  rpc deleteDetailOutbound(DeleteDetailOutboundRequest) returns (DeleteDetailOutboundResponse);
 }
