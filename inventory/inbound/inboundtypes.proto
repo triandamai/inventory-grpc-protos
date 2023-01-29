@@ -23,6 +23,7 @@ message CreateNewInboundRequest{
 }
 
 message UpdateInboundRequest{
+  string inboundId=1;
   string supplierId=2;
   int64 totalAmount=3;
   string status=4;
@@ -30,13 +31,13 @@ message UpdateInboundRequest{
 }
 
 message  DeleteInboundRequest{
-  string customerId = 1;
+  string inboundId = 1;
 }
 message InboundResponse{
   string inboundId=1;
   optional user.UserResponse cashier=2;
   optional supplier.SupplierResponse supplier=3;
-  int64 totalAmount=4;
+  optional int64 totalAmount=4;
   int64 statue=5;
   string createdAt=6;
   string updatedAt=7;
@@ -74,4 +75,9 @@ message DetailInboundResponse{
   int64 totalPrice=6;
   string createdAt=7;
   string updatedAt=8;
+}
+
+message DeleteDetailInboundResponse{
+  bool success=1;
+  repeated string detailInboundId=2;
 }
