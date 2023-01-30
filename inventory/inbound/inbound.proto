@@ -16,5 +16,5 @@ service Inbound{
   rpc updateInbound(UpdateInboundRequest) returns(InboundResponse);
   rpc updateStatusInbound(UpdateStatusRequest) returns (InboundResponse);
   rpc deleteInbound(DeleteInboundRequest) returns(InboundResponse);
-  rpc deleteDetailInbound(DeleteDetailInboundRequest) returns (DetailInboundResponse);
+  rpc deleteDetailInbound(DeleteDetailInboundRequest) returns (DeleteDetailInboundResponse);
 }
